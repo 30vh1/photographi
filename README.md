@@ -5,7 +5,8 @@
 
 > Take screenshots of various services and websites on an automated form  
 
-![Test run with 30 url and 30 threads](https://raw.githubusercontent.com/30vh1/photographi/master/resources/30_targets_30_threads.gif)
+## Realtime test run with 30 targets on 30 threads (i7 8550u) over WIFI
+![Test run with 30 url and 30 threads][30-threads-gif]
 
 ## Table of contents
 
@@ -14,6 +15,7 @@
 3. [How To](#how-to)  
 
     - [Installation](#installation)
+    - [Configuration](#configuration)
     - [Usage](#usage)  
     
     	- [Usage Example](#usage-example)  
@@ -32,7 +34,7 @@ Probably there's more to it than what I've just wrote but, you get the idea righ
 
 As this project is built upon **Selenium** using **Google Chrome**, **Chromedriver** and **Google Chrome** are a must that should be satisfied in order to be able to take advantage of this Software.
 
-### On Windows  
+### On Windows 
 
 * Download and install Google Chrome from [here][google-chrome-url-windows]  
 * Download the latest version of Chromedriver from [here][chromedriver-url-windows]  
@@ -52,6 +54,24 @@ Run the following to install required python dependecies
 ```  
 
 ### Configuration
+The configuration is present on ```config.json``` . Only the parameters that are written on it are customizable. (More options are coming :))
+I'ts possible to pass another configuration through the command line with the ```-c``` or ```-config``` options.
+
+```Javascript  
+{
+	"browser_settings":{
+		"horizontal_resolution": 1920,
+		"vertical_resolution": 1080,
+		"site_load_timeout":10
+	},
+	"default_paths":{
+		"chromedriver":"../resources/chromedriver.exe"
+	},
+	"general_settings":{
+		"number_of_threads": 8
+	}
+}
+``` 
 ### Usage   
 ```shell  
 λ  python.exe .\capture.py -h
@@ -103,7 +123,7 @@ optional arguments:
 ``` 
 
 * And will save a screenshot like the following one with the naming scheme ```PROTOCOL_ADDRESS_PORT.DOMAINEXTENSION.png```  
-![Capture of the site http://google.es](https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/http_google.es.png)  
+![Screenshot from https://facebook.com][facebook-screenshot]  
 
 ## Roadmap  
 Functionalities to add to the tool  
@@ -137,8 +157,9 @@ Functionalities to add to the tool
 	Modify how the threads behave and how the information is handled in order to reduce resources used by the tool  
 
 
-
+[30-threads-gif]: https://raw.githubusercontent.com/30vh1/photographi/master/resources/30_targets_30_threads.gif
 [chromedriver-url-linux]: https://chromedriver.storage.googleapis.com/index.html
-[chromedriver-url-windows]: https://chromedriver.storage.googleapis.com/index.html  
+[chromedriver-url-windows]: https://chromedriver.storage.googleapis.com/index.html
+[facebook-screenshot]: https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/https_facebook.com.png
 [google-chrome-url-linux]: https://www.google.com/chrome/browser/desktop/index.html  
 [google-chrome-url-windows]: https://www.google.com/chrome/browser/desktop/index.html  

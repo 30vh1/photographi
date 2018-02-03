@@ -1,10 +1,10 @@
-import capture_IP
+from screenshot_tool import ScreenshotDownloader
 import argparse
 import sys
 import os
 import threading
 from time import strftime
-import codecs
+import json
 
 # Config File
 
@@ -38,6 +38,20 @@ if __name__ == '__main__':
     parser.add_argument('-verbose','-v',metavar='verbose',type=str,nargs='?', help='shows verbose information, if a file is specified, outputs to it')
     args = parser.parse_args()
 
+    #  Initialize values based on config file settings
+    if args.config:
+        config_file = args.config
+    with open(config_file) as json_data_file:
+        data = json.load(json_data_file)
+
+    screenshot_tool = ScreenshotDownloader()
+
+    screenshot_tool.setScreenshotResolution(data["browser_settings"]["horizontal_resolution"],data["browser_settings"]["vertical_resolution"])
+    screenshot_tool.setChromedriverPath(data["default_paths"]["chromedriver"])
+    screenshot_tool.setSiteLoadTimeout(data["browser_settings"]["site_load_timeout"])
+    thread_num = data["general_settings"]["number_of_threads"]
+
+
     if args.path:
         PATH = os.getcwd()+os.sep+args.path+os.sep
         if os.path.isdir(PATH):
@@ -53,7 +67,6 @@ if __name__ == '__main__':
         try:
             print("Capturing from file "+args.file+"...",file=sys.stderr)
             file  = open(args.file,"r")
-            # file = codecs.open(args.file, "r", "utf-16")
         except:
             print("Error trying to open a file!!! Make sure the name is correct!!!",file=sys.stderr)
             exit(1)
@@ -63,8 +76,6 @@ if __name__ == '__main__':
         index = int(0)
         if args.threads:
             thread_num = args.threads
-        else:
-            thread_num = 5
 
         base_index = 0
 
@@ -74,7 +85,7 @@ if __name__ == '__main__':
                 try:
                     current_url = splitted_content[base_index+i].replace('\n','')
                     # print("["+strftime("%H:%M:%S")+"]\tCapturing",current_url,"from thread",threading.current_thread(),sep=" ", file=sys.stderr)
-                    thread = threading.Thread(target=capture_IP.takeScreenshotFullURL, args=(current_url,PATH,))
+                    thread = threading.Thread(target=screenshot_tool.takeScreenshot, args=(current_url,PATH,))
                     threads.append(thread)
                     thread.start()
                 except IndexError:
@@ -87,7 +98,7 @@ if __name__ == '__main__':
 
     elif args.target:
         print("Capturing "+args.target+"...",file=sys.stderr)
-        capture_IP.takeScreenshotFullURL(args.target,PATH)
+        screenshot_tool.takeScreenshot(args.target,PATH)
     else:
         print("You should indicate at least one file or address!!",file=sys.stderr)
         exit(1)
