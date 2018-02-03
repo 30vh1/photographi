@@ -8,8 +8,8 @@
 1. [About](#about)
 2. [Non-python Dependencies](#dependencies)
 3. [How To](#how-to)
-  * [Installation](#installation)
-  * [Usage](#usage)  
+····- [Installation](#installation)
+····- [Usage](#usage)  
 
 ## About    
 
@@ -26,13 +26,13 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 
 ### On Windows  
 
-  1. Download and install Google Chrome from [here][google-chrome-url-windows]  
-  2. Download the latest version of Chromedriver from [here][chromedriver-url-windows]  
+* Download and install Google Chrome from [here][google-chrome-url-windows]  
+* Download the latest version of Chromedriver from [here][chromedriver-url-windows]  
   
 ### On Linux  
-  1. Install Google Chrome from your package manager or download it from [here][google-chrome-url-linux]  
-    * It's also possible to use Chromium instead of Google Chrome for those who desire it  
-  2. Install Chromedriver from your package manager o dowload the latest version from [here][chromedriver-url-linux]   
+* Install Google Chrome from your package manager or download it from [here][google-chrome-url-linux]
+····* It's also possible to use Chromium instead of Google Chrome for those who desire it  
+* Install Chromedriver from your package manager o dowload the latest version from [here][chromedriver-url-linux]   
 
 ## How-To
 
