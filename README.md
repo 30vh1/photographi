@@ -40,7 +40,21 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 
 ### Installation  
 ### Configuration
-### Usage    
+### Usage   
+```python  
+λ  python.exe .\capture.py -h
+usage: capture.py [-h] [-path [path]] [-file [file]] [-threads [threads]]
+                  [-ip [ip]]
+
+Takes screenshots of a IP or group of IP
+
+optional arguments:
+  -h, --help          show this help message and exit
+  -path [path]        path to store all data (Optional)
+  -file [file]        file to read IP/domains from
+  -threads [threads]  number of threads to use (only when reading from file)
+  -ip [ip]            ip to scan (In case there's only one
+``` 
 
 [chromedriver-url-linux]: https://chromedriver.storage.googleapis.com/index.html
 [chromedriver-url-windows]: https://chromedriver.storage.googleapis.com/index.html  
