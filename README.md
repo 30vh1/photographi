@@ -1,7 +1,7 @@
 ``` This is a project still in early stages of development so, heavy changes should be expected !!! ```  
 # PhotograΦ   
 
-![](https://raw.githubusercontent.com/30vh1/photographi/master/resources/Logo/logo256.png)
+![](https://raw.githubusercontent.com/30vh1/photographi/master/resources/logo/logo256.png)
 
 > Take screenshots of various services and websites on an automated form  
 
