@@ -47,10 +47,19 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 ### Usage   
 ```shell  
 λ  python.exe .\capture.py -h
+
+                                                                         ██╗
+██████╗ ██╗  ██╗ ██████╗ ████████╗ ██████╗  ██████╗ ██████╗  █████╗   ████████╗
+██╔══██╗██║  ██║██╔═══██╗╚══██╔══╝██╔═══██╗██╔════╝ ██╔══██╗██╔══██╗ ██╔═██╔═██╗
+██████╔╝███████║██║   ██║   ██║   ██║   ██║██║  ███╗██████╔╝███████║ ██║ ██║ ██║
+██╔═══╝ ██╔══██║██║   ██║   ██║   ██║   ██║██║   ██║██╔══██╗██╔══██║ ██║ ██║ ██║
+██║     ██║  ██║╚██████╔╝   ██║   ╚██████╔╝╚██████╔╝██║  ██║██║  ██║ ╚████████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═██╔══╝
+                                                                          ╚╝
+                                                                    By B0vh1
+
 usage: capture.py [-h] [-path [path]] [-file [file]] [-threads [threads]]
                   [-ip [ip]]
-
-Takes screenshots of a IP or group of IP
 
 optional arguments:
   -h, --help          show this help message and exit

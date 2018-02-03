@@ -1,0 +1,6 @@
+// Modify as you wish :)
+{
+	"default_paths":{
+		"Chromedriver":"../resources/chromedriver.exe"
+	}
+}
