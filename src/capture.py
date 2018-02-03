@@ -5,6 +5,10 @@ import os
 import threading
 from time import strftime
 
+# Config File
+
+config_file = "./config.json"
+
 
 # Logo art
 
@@ -25,10 +29,12 @@ LOGO = """
 if __name__ == '__main__':
     print(LOGO)
     parser = argparse.ArgumentParser(description='')
-    parser.add_argument('-path', metavar='path', type=str, nargs='?', help='path to store all data (Optional)')
-    parser.add_argument('-file', metavar='file', type=str, nargs='?', help='file to read IP/domains from')
-    parser.add_argument('-threads', metavar='threads', type=int, nargs='?', help='number of threads to use (only when reading from file)')
-    parser.add_argument('-ip', metavar='ip', type=str, nargs='?', help='ip to scan (In case there\'s only one')
+    parser.add_argument('-config','-c', metavar='file', type=str, nargs=1, help= 'file to read configuration from')
+    parser.add_argument('-file','-f', metavar='file', type=str, nargs='?', help='file to read IP/domains from')
+    parser.add_argument('-path','-p', metavar='path', type=str, nargs='?', help='path to store all data (Optional)')
+    parser.add_argument('-target','-t', metavar='target', type=str, nargs='?', help='target to scan (In case there\'s only one')
+    parser.add_argument('-threads','-th', metavar='threads', type=int, nargs='?', help='number of threads to use (only when reading from file)')
+    parser.add_argument('-verbose','-v',metavar='verbose',type=str,nargs='?', help='shows verbose information, if a file is specified, outputs to it')
     args = parser.parse_args()
 
     if args.path:
@@ -77,9 +83,9 @@ if __name__ == '__main__':
             threads[:] = []
             base_index+=(thread_num)
 
-    elif args.ip:
-        print("Capturing "+args.ip+"...",file=sys.stderr)
-        capture_IP.takeScreenshotFullURL(args.ip,PATH)
+    elif args.target:
+        print("Capturing "+args.target+"...",file=sys.stderr)
+        capture_IP.takeScreenshotFullURL(args.target,PATH)
     else:
         print("You should indicate at least one file or address!!",file=sys.stderr)
         exit(1)

@@ -1,6 +1,13 @@
 // Modify as you wish :)
 {
+	"browser_settings":{
+		"resolution":"1920x1080",
+		"site_load_timeout":"10"
+	},
 	"default_paths":{
-		"Chromedriver":"../resources/chromedriver.exe"
+		"chromedriver":"../resources/chromedriver.exe"
+	},
+	"general_settings":{
+		"number_of_threads":"8"
 	}
 }
