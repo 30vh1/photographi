@@ -64,15 +64,17 @@ Run the following to install required python dependecies
                                                                           ╚╝
                                                                     By B0vh1
 
-usage: capture.py [-h] [-path [path]] [-file [file]] [-threads [threads]]
-                  [-ip [ip]]
+usage: capture.py [-h] [-config file] [-file [file]] [-path [path]]
+                  [-target [target]] [-threads [threads]] [-verbose [verbose]]
 
 optional arguments:
-  -h, --help          show this help message and exit
-  -path [path]        path to store all data (Optional)
-  -file [file]        file to read IP/domains from
-  -threads [threads]  number of threads to use (only when reading from file)
-  -ip [ip]            ip to scan (In case there's only one
+  -h, --help           		 			show this help message and exit
+  -config file, -c File 	 			file to read configuration from
+  -file [file], -f [file]	 			file to read IP/domains from
+  -path [path], -p [path]	 			path to store all data (Optional)
+  -target [target], -t [target]			target to scan (In case there's only one
+  -threads [threads], -th [threads]		number of threads to use (only when reading from file)
+  -verbose [verbose], -v [verbose]		shows verbose information, if a file is specified, outputs to it
 ``` 
 #### Usage Example  
 * Executing the following line   
