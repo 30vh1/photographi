@@ -44,6 +44,11 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 ## How-To
 
 ### Installation  
+Run the following to install required python dependecies  
+```shell  
+λ  pip install -r requirements.txt
+```  
+
 ### Configuration
 ### Usage   
 ```shell  
