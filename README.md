@@ -6,7 +6,7 @@
 ## Table of contents
 
 1. [About](#about)
-2. [Non-python Dependencies](#dependencies)
+2. [Non-python Dependencies](#non-python-dependencies)
 3. [How To](#how-to)  
 
     - [Installation](#installation)
