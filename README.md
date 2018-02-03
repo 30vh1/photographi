@@ -55,6 +55,32 @@ optional arguments:
   -threads [threads]  number of threads to use (only when reading from file)
   -ip [ip]            ip to scan (In case there's only one
 ``` 
+### Example  
+* Executing the following line   
+
+```shell  
+λ  .\capture.py -path ../test/captures -ip http://google.es
+```
+
+* Will create a folder named ```captures``` under the test directory
+``` 
+/photographi |
+			 | /src
+					| capture.py
+					| capture_IP.py
+					| customip.py
+			 | /test
+				 	| /captures
+					 			| http_google.es.png
+				 	| url_list.txt
+			 | .gitignore
+			 | LICENSE
+			 | README.md
+
+``` 
+
+* And will save a screenshot like the following one with the naming scheme ```PROTOCOL_ADDRESS_PORT.DOMAINEXTENSION.png```  
+![Capture of the site http://google.es](https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/http_google.es.png)
 
 [chromedriver-url-linux]: https://chromedriver.storage.googleapis.com/index.html
 [chromedriver-url-windows]: https://chromedriver.storage.googleapis.com/index.html  
