@@ -91,9 +91,9 @@ usage: capture.py [-h] [-config file] [-file [file]] [-path [path]]
 
 optional arguments:
   -h, --help					show this help message and exit
-  -config file, -c File 		file to read configuration from
-  -file [file], -f [file]	 	file to read IP/domains from
-  -path [path], -p [path]	 	path to store all data (Optional)
+  -config file, -c File 			file to read configuration from
+  -file [file], -f [file]	 		file to read IP/domains from
+  -path [path], -p [path]	 		path to store all data (Optional)
   -target [target], -t [target]			target to scan (In case there's only one
   -threads [threads], -th [threads]		number of threads to use (only when reading from file)
   -verbose [verbose], -v [verbose]		shows verbose information, if a file is specified, outputs to it
@@ -102,7 +102,7 @@ optional arguments:
 * Executing the following line   
 
 ```shell  
-λ  .\capture.py -path ../test/captures -ip http://google.es
+λ  .\capture.py -p ../test/captures -t https://facebook.com
 ```
 
 * Will create a folder named ```captures``` under the test directory
@@ -114,7 +114,7 @@ optional arguments:
 					| customip.py
 			 | /test
 				 	| /captures
-					 			| http_google.es.png
+					 			| https_facebook.com.png
 				 	| url_list.txt
 			 | .gitignore
 			 | LICENSE
@@ -128,7 +128,7 @@ optional arguments:
 ## Roadmap  
 Functionalities to add to the tool  
 
-* Configuration file  
+*  ~~Configuration file~~
 	
 	File to specify default locations, default thread values, naming scheme...  
 
