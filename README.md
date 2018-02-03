@@ -1,6 +1,8 @@
 ``` This is a project still in early stages of development so, heavy changes should be expected !!! ```  
 # PhotograΦ   
 
+![](./resources/logo.png =256x)
+
 > Take screenshots of various services and websites on an automated form  
 
 ## Table of contents
