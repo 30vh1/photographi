@@ -20,7 +20,6 @@ class ScreenshotDownloader:
 	def setScreenshotResolution(self,horizontal_resolution,vertical_resolution):
 		self.horizontal_screenshot_resolution = horizontal_resolution
 		self.vertical_screenshot_resolution = vertical_resolution
-		# print("Resolution = ",self.horizontal_resolution,"x",self.vertical_resolution)
 
 	def setChromedriverPath(self,path):
 		self.chromedriver_path=path
@@ -51,7 +50,7 @@ class ScreenshotDownloader:
 		try:
 			driver.get(URL)
 		except:
-			print("Error getting ",URL,"!")
+			print("Error getting ",URL,"!",sep="",file=sys.stderr)
 			driver.quit()
 			return 1
 		try:
