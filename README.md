@@ -1,4 +1,4 @@
-> ``` This is a project still in early stages of development so, heavy changes should be expected !!! ```  
+``` This is a project still in early stages of development so, heavy changes should be expected !!! ```  
 # PhotograΦ   
 
 > Take screenshots of various services and websites on an automated form  
