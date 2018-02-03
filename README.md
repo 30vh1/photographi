@@ -11,6 +11,8 @@
 
     - [Installation](#installation)
     - [Usage](#usage)  
+    
+    	- [Usage Example](#usage-example)
 
 ## About    
 
@@ -41,7 +43,7 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 ### Installation  
 ### Configuration
 ### Usage   
-```python  
+```shell  
 λ  python.exe .\capture.py -h
 usage: capture.py [-h] [-path [path]] [-file [file]] [-threads [threads]]
                   [-ip [ip]]
@@ -55,7 +57,7 @@ optional arguments:
   -threads [threads]  number of threads to use (only when reading from file)
   -ip [ip]            ip to scan (In case there's only one
 ``` 
-### Example  
+#### Usage Example  
 * Executing the following line   
 
 ```shell  
