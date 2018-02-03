@@ -7,22 +7,19 @@ from customip import customIP
 
 PROTOCOLS_TO_MATCH=['http','https','http-proxy']
 
-DRIVER = 'chromedriver'
+DRIVER = '../resources/chromedriver.exe'
 
 def setOptions():
 	options = webdriver.ChromeOptions()
 	options.add_argument('--headless')
 	options.add_argument('--disable-gpu')
-	# options.add_argument('--ignore-certificate-errors')
+	options.add_argument('--ignore-certificate-errors')
 	options.add_argument('--allow-running-insecure-content')
-	# options.add_argument('--disable-javascript')
 	options.add_argument('--process-per-site')
-	options.add_argument('--disable-background-mode')
-	options.add_argument('-disable-plugins-discovery')
 	options.add_argument('--disable-plugins')
-	options.add_argument('--bwsi')
-	options.add_argument('--allow-http-background-page')
 	options.add_argument('--hide-scrollbars')
+	options.add_argument('--log-level=3');
+	options.add_argument('--silent');
 	return options
 
 def setProperties(driver):

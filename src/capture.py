@@ -4,6 +4,7 @@ import sys
 import os
 import threading
 from time import strftime
+import codecs
 
 # Config File
 
@@ -52,10 +53,11 @@ if __name__ == '__main__':
         try:
             print("Capturing from file "+args.file+"...",file=sys.stderr)
             file  = open(args.file,"r")
+            # file = codecs.open(args.file, "r", "utf-16")
         except:
             print("Error trying to open a file!!! Make sure the name is correct!!!",file=sys.stderr)
             exit(1)
-        splitted_content=file.readlines()
+        splitted_content= file.readlines()
         file.close()
         num_elements = len(splitted_content)
         index = int(0)

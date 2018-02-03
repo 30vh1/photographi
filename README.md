@@ -5,6 +5,8 @@
 
 > Take screenshots of various services and websites on an automated form  
 
+![Test run with 30 url and 30 threads](https://raw.githubusercontent.com/30vh1/photographi/master/resources/30_targets_30_threads.gif)
+
 ## Table of contents
 
 1. [About](#about)
