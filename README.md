@@ -14,7 +14,8 @@
     - [Installation](#installation)
     - [Usage](#usage)  
     
-    	- [Usage Example](#usage-example)
+    	- [Usage Example](#usage-example)  
+4. [Roadmap](#roadmap)
 
 ## About    
 
@@ -93,7 +94,40 @@ optional arguments:
 ``` 
 
 * And will save a screenshot like the following one with the naming scheme ```PROTOCOL_ADDRESS_PORT.DOMAINEXTENSION.png```  
-![Capture of the site http://google.es](https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/http_google.es.png)
+![Capture of the site http://google.es](https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/http_google.es.png)  
+
+## Roadmap  
+Functionalities to add to the tool  
+
+* Configuration file  
+	
+	File to specify default locations, default thread values, naming scheme...  
+
+* Multiple protocol support  
+	
+	Add support for ftp (even with anonymous user) and other protocols supported by the browser  
+
+* Ping test  
+
+	Add an option to perform ping before trying to take a capture just to ensure the url/ip really exists and is avaliable  
+
+* Download test  
+	
+	Add an option to perform a **GET** petition in order to check if the port in the url is open and if it is reachable  
+
+* Verbose option  
+	
+	Add an option to show or don't verbose information  
+
+* Exception handling  
+
+	Improve exception handling with improved messages and avoid unnecessary ones  
+
+* Improve performance  
+
+	Modify how the threads behave and how the information is handled in order to reduce resources used by the tool  
+
+
 
 [chromedriver-url-linux]: https://chromedriver.storage.googleapis.com/index.html
 [chromedriver-url-windows]: https://chromedriver.storage.googleapis.com/index.html  
