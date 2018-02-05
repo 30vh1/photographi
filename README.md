@@ -37,13 +37,13 @@ As this project is built upon **Selenium** using **Google Chrome**, **Chromedriv
 ### On Windows 
 
 * Download and install Google Chrome from [here][google-chrome-url-windows]  
-* Download the latest version of Chromedriver from [here][chromedriver-url-windows]  
+* Download Chromedriver 2.35 from [here][chromedriver-url-windows]  
   
 ### On Linux  
 * Install Google Chrome from your package manager or download it from [here][google-chrome-url-linux]  
 
     * It's also possible to use Chromium instead of Google Chrome for those who desire it  
-* Install Chromedriver from your package manager o dowload the latest version from [here][chromedriver-url-linux]   
+* Install Chromedriver 2.35 from your package manager o dowload it from [here][chromedriver-url-linux]   
 
 ## How-To
 
