@@ -46,8 +46,14 @@ if __name__ == '__main__':
 
     screenshot_tool = ScreenshotDownloader()
 
+    if data["browser_settings"]["browser_to_use"] in data["browser_settings"]["avaliable_browsers"]:
+        screenshot_tool.setBrowser(data["browser_settings"]["browser_to_use"])
+        screenshot_tool.setDriverPath(data["driver_paths"][data["browser_settings"]["browser_to_use"]])
+    else:
+        print("You've selected an invalid browser in your config file!",file=sys.stderr)
+        exit(1)
+
     screenshot_tool.setScreenshotResolution(data["browser_settings"]["horizontal_resolution"],data["browser_settings"]["vertical_resolution"])
-    screenshot_tool.setChromedriverPath(data["default_paths"]["chromedriver"])
     screenshot_tool.setSiteLoadTimeout(data["browser_settings"]["site_load_timeout"])
     thread_num = data["general_settings"]["number_of_threads"]
 

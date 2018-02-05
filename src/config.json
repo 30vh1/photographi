@@ -1,11 +1,14 @@
 {
 	"browser_settings":{
+		"avaliable_browsers":["Chrome","Firefox"],
+		"browser_to_use": "Firefox",
 		"horizontal_resolution": 1920,
 		"vertical_resolution": 1080,
 		"site_load_timeout":10
 	},
-	"default_paths":{
-		"chromedriver":"../resources/chromedriver.exe"
+	"driver_paths":{
+		"Chrome":"../resources/chromedriver.exe",
+		"Firefox":"../resources/geckodriver.exe"
 	},
 	"general_settings":{
 		"number_of_threads": 8
