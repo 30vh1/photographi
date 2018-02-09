@@ -60,12 +60,15 @@ I'ts possible to pass another configuration through the command line with the ``
 ```Javascript  
 {
 	"browser_settings":{
+		"avaliable_browsers":["Chrome","Firefox"],
+		"browser_to_use": "Firefox",
 		"horizontal_resolution": 1920,
 		"vertical_resolution": 1080,
 		"site_load_timeout":10
 	},
-	"default_paths":{
-		"chromedriver":"../resources/chromedriver.exe"
+	"driver_paths":{
+		"Chrome":"../resources/chromedriver.exe",
+		"Firefox":"../resources/geckodriver.exe"
 	},
 	"general_settings":{
 		"number_of_threads": 8
@@ -98,6 +101,33 @@ optional arguments:
   -threads [threads], -th [threads]		number of threads to use (only when reading from file)
   -verbose [verbose], -v [verbose]		shows verbose information, if a file is specified, outputs to it
 ``` 
+
+#### To be noted  
+Currently the tool supports two browsers Chrome and Firefox, both have it's advantages and disadvantages.
+
+**Firefox**  
+Works right without any user interface but it's performance gets drastically penalized as Firefox uses 4 threads each time it launches so, if we were to launch 8 processes 32 will be created resulting in a heavy bottleneck on the CPU (*It looks like creating a custom profile and loading it would allow to use only one thread, I'm currently looking into it*)
+
+**Chrome**
+
+Currently the best option, It allows for the most performance friendly experience but it also has its downsides. If chrome is used in headless mode, any website with an invalid certificate would be captured as a white image, if it isn't in headless mode, then for each website an annoying browser appears each time it loads a site.
+
+As it is the software is designed to run without the headless mode activated on chrome, if you want it then go to the ```screenshot_tool.py``` and uncomment the **42th** line.
+```python   
+# self.options.add_argument('--headless')
+
+``` 
+
+**Best Experience**  
+The best experience achievable right now is running the default version with chromium on linux. Installing [Xvfb][svfb-link] allows us to run a virtual desktop where the browser it's openned so in the real world no annoying pop-up browsers are created.
+
+To run the software using **xvfb** just type in the terminal (after having it installed) the following
+
+```shell
+xvfb-run python capture.py ...
+
+```  
+
 #### Usage Example  
 * Executing the following line   
 
@@ -163,3 +193,4 @@ Functionalities to add to the tool
 [facebook-screenshot]: https://raw.githubusercontent.com/30vh1/photographi/master/test/captures/https_facebook.com.png
 [google-chrome-url-linux]: https://www.google.com/chrome/browser/desktop/index.html  
 [google-chrome-url-windows]: https://www.google.com/chrome/browser/desktop/index.html  
+[xvfb-link]: https://en.wikipedia.org/wiki/Xvfb

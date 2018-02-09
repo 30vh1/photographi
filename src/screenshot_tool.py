@@ -39,7 +39,7 @@ class ScreenshotDownloader:
 		
 	def setOptions(self):
 		if self.browser == "Chrome":
-			self.options.add_argument('--headless')
+			# self.options.add_argument('--headless')
 			self.options.add_argument('--disable-gpu')
 			self.options.add_argument('--ignore-certificate-errors')
 			self.options.add_argument('--allow-running-insecure-content')
