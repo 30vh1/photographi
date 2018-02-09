@@ -1,4 +1,5 @@
 ``` This is a project still in early stages of development so, heavy changes should be expected !!! ```  
+Btw, read [this](#to-be-noted) if you want to use the software ;)
 # PhotograΦ   
 
 ![](https://raw.githubusercontent.com/30vh1/photographi/master/resources/logos/logo256.png)
@@ -119,7 +120,7 @@ As it is the software is designed to run without the headless mode activated on 
 ``` 
 
 **Best Experience**  
-The best experience achievable right now is running the default version with chromium on linux. Installing [Xvfb][svfb-link] allows us to run a virtual desktop where the browser it's openned so in the real world no annoying pop-up browsers are created.
+The best experience achievable right now is running the default version with chromium on linux. Installing [Xvfb][xvfb-link] allows us to run a virtual desktop where the browser it's openned so in the real world no annoying pop-up browsers are created.
 
 To run the software using **xvfb** just type in the terminal (after having it installed) the following
 
